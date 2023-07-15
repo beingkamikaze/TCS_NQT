@@ -1,0 +1,17 @@
+int duplicateNumber(int *arr, int size)
+{
+    //Write your code here
+    bool vis[size-1]={false};
+    int ans;
+    for(int i=0;i<size;i++)
+    {
+        if(vis[arr[i]]==false)
+        vis[arr[i]]=true;
+        else
+        {
+            ans=arr[i];
+            break;
+        }
+    }
+    return ans;
+}
